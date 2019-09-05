@@ -23,7 +23,9 @@ Including another URLconf
 from django.conf.urls import url
 
 from . import view
+from . import testMysql
 
 urlpatterns = [
     url(r'^$', view.hello),
+    url(r'^testMysql$', testMysql.testMysql)
 ]
