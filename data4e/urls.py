@@ -26,6 +26,7 @@ from . import view
 from . import testMysql
 
 urlpatterns = [
-    url(r'^$', view.hello),
-    url(r'^testMysql$', testMysql.testMysql)
+    url(r'^hello.html$', view.hello),
+    url(r'^testMysql$', testMysql.testMysql),
+    url(r'^$', view.index),
 ]
