@@ -1,10 +1,12 @@
 <div class="header">
     <div class="logo">
-        DATA4E.cn
+        <a href="/">
+            DATA4E.cn
+        </a>
     </div>
     <nav class="nav">
-        <a href="/hello/">工具</a> |
-        <a href="/css/">教程</a> |
+        <a href="/hello.html">工具</a> |
+        <a href="/testMysql">教程</a> |
         <a href="/js/">在线文档</a> |
         <a href="/jquery/">开源项目</a>
     </nav>
@@ -33,10 +35,20 @@
     .nav a:hover {
         opacity: 1;
     }
+    .nav a:active {
+        font-weight: bold;
+    }
+    .nav a:visited {
+        color: aliceblue;
+        opacity: 0.6;
+    }
     .logo {
         align-self: center;
-        color: #2b85e4;
         margin-left: 20px;
+    }
+    .logo a{
+        text-decoration: none;
+        color: #2b85e4;
         font-size: 20px;
     }
 </style>

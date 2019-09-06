@@ -9,3 +9,8 @@ def hello(request):
 def index(request):
     context = {'title': 'data for everything', 'hello': 'this is index !'}
     return render(request, 'app.html', context)
+
+
+def login(request):
+    context = {'title': '登陆'}
+    return render(request, 'app.html', context)

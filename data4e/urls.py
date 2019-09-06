@@ -21,6 +21,7 @@ Including another URLconf
 # ]
 
 from django.conf.urls import url
+from django.contrib import admin
 
 from . import view
 from . import testMysql
@@ -29,4 +30,5 @@ urlpatterns = [
     url(r'^hello.html$', view.hello),
     url(r'^testMysql$', testMysql.testMysql),
     url(r'^$', view.index),
+    url(r'^admin/', admin.site.urls),
 ]
