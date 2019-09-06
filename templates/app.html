@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <title>data4e | {{title}}</title>
 </head>
-<body style="margin: 0px">
-{% include 'framework/header.html' %}
-<p></p>
-{{ hello }}
-<p></p>
-{% include 'framework/footer.html' %}
+<body>
+    {% include 'framework/header.html' %}
+    <p></p>
+    <div class="content">
+        <div class="left">
+
+        </div>
+    </div>
+    <p></p>
+    {% include 'framework/footer.html' %}
 </body>
+
+<style>
+    body {
+        margin: 0;
+    }
+    .content {
+        min-height: 600px;
+    }
+</style>
 </html>
