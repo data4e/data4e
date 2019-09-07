@@ -14,3 +14,9 @@ def index(request):
 def login(request):
     context = {'title': '登陆'}
     return render(request, 'app.html', context)
+
+
+def tools(request):
+    context = {'title': 'tools'}
+    return render(request, 'app.html', context)
+
