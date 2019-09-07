@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sorry 💦 , The page not found ! - Data For Everything !</title>
-</head>
-<body>
-    {% include 'framework/header.html' %}
+{% extends 'base.html' %}
+{% block content_left %}
     <div>
-        Sorry , The Page not found !
+        Sorry, the page is not found!
     </div>
-    {% include 'framework/footer.html' %}
-</body>
-</html>
+{% endblock %}
