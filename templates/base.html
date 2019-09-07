@@ -5,26 +5,36 @@
     <title>data4e | {{title}}</title>
 </head>
 <body>
-    {% include 'framework/header.html' %}
-    <br>
-    <div class="content">
-        {% block content_left %}
-        {% endblock %}
-        {% block content_right %}
-        {% endblock %}
+    <div class="container">
+        {% include 'framework/header.html' %}
+        <br>
+        <div class="content">
+            {% block content_left %}
+            {% endblock %}
+            {% block content_right %}
+            {% endblock %}
+        </div>
+        <br>
+        {% include 'framework/footer.html' %}
     </div>
-    <br>
-    {% include 'framework/footer.html' %}
 </body>
 
 <style>
-    body {
+    html,body {
         margin: 0;
+        padding: 0;
+        height: 100%;
     }
-
+    .container {
+        min-height: 100%;
+        height: auto !important;
+        position: relative;
+        background-color: #f6f8fa;
+    }
     .content {
-        min-height: 600px;
         margin: 0 100px 0 100px;
+        padding: 10px;
+        background-color: aliceblue;
     }
 </style>
 </html>
