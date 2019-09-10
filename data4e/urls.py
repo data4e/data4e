@@ -30,5 +30,4 @@ urlpatterns = [
     url(r'^$', view.index),
     url(r'^admin/', admin.site.urls),
     url(r'^tools$', view.tools),
-
 ]

@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <header class="header">
     <div class="logo">
         <a href="/">
@@ -12,7 +13,9 @@
         <a href="">数据仓库</a>
     </nav>
     <div class="userInfo">
-        <div class="avatar"></div>
+        <img src="{% static '/images/message.png' %}" alt="通知" class="message">
+        <img src="{% static '/images/plus.png'%}" class="plus" alt="新增">
+        <img class="avatar" src="https://i.loli.net/2017/08/21/599a521472424.jpg" alt="avatar">
     </div>
 </header>
 
@@ -57,15 +60,25 @@
     }
     .userInfo {
         align-self: center;
-        margin-right: 20px;
         right: 20px;
         position: absolute;
         color: #e8eaec;
     }
+    .userInfo img  {
+        width: 25px;
+        height: 25px;
+        float: left;
+        background: url("{% static '/images/plus.png'%}");
+        margin-right: 10px;
+        opacity: 0.6;
+    }
+
     .avatar {
+        float: right;
         width: 25px;
         height: 25px;
         border-radius: 50%;
         background: url("https://i.loli.net/2017/08/21/599a521472424.jpg");
+        opacity: 1 !important;
     }
 </style>
