@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 Base = 'base.html'
 Tools = 'tools.html'
+Article = 'article.html'
 
 
 def public_parameter(request):
@@ -13,9 +14,9 @@ def public_parameter(request):
     return render(request, Base, context)
 
 
-def hello(request):
+def article(request):
     context = {'hello': 'Hello World!'}
-    return render(request, Base, context)
+    return render(request, Article, context)
 
 
 def index(request):

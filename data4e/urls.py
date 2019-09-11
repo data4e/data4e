@@ -26,7 +26,7 @@ from django.contrib import admin
 from . import view
 
 urlpatterns = [
-    url(r'^hello.html$', view.hello),
+    url(r'^article$', view.article),
     url(r'^$', view.index),
     url(r'^admin/', admin.site.urls),
     url(r'^tools$', view.tools),
