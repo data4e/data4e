@@ -9,10 +9,14 @@
         {% include 'framework/header.html' %}
         <br>
         <div class="content">
-            {% block content_left %}
-            {% endblock %}
-            {% block content_right %}
-            {% endblock %}
+            <div class="content_left">
+                {% block content_left %}
+                {% endblock %}
+            </div>
+            <div class="content_right">
+                {% block content_right %}
+                {% endblock %}
+            </div>
         </div>
         <br>
         {% include 'framework/footer.html' %}
@@ -33,9 +37,24 @@
     }
     .content {
         margin: 10px 100px 60px 100px;
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #fff;
+        overflow: hidden;
     }
+    .content_left {
+        width: 68%;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        float: left;
+        padding: 10px;
+    }
+    .content_right {
+        width: 28%;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        float: right;
+        padding: 10px;
+    }
+
 </style>
 </html>
