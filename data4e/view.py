@@ -4,6 +4,7 @@ from django.shortcuts import render
 Base = 'base.html'
 Tools = 'tools.html'
 Article = 'article.html'
+AddArticle = 'addOrUpdateArticle.html'
 
 
 def public_parameter(request):
@@ -35,4 +36,10 @@ def login(request):
 def tools(request):
     context = {'title': 'tools'}
     return render(request, Tools, context)
+
+
+def add_article(request):
+    context = {}
+    return render(request, AddArticle, context)
+
 
