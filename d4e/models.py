@@ -3,12 +3,14 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+# 标签
 class Tags(models.Model):
     id = models.IntegerField(primary_key=True)  # id
     name = models.CharField(max_length=20)
     createTime = models.DateTimeField(auto_now_add=True)
 
 
+# 文章
 class Article(models.Model):
     id = models.IntegerField(primary_key=True)
     createTime = models.DateTimeField(auto_now_add=True)
@@ -21,6 +23,7 @@ class Comment(models.Model):
     article = models.ForeignKey(Article, on_delete=True)
 
 
+# 导航
 class Nav(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=20)
@@ -29,6 +32,7 @@ class Nav(models.Model):
     updateTime = models.DateTimeField(auto_now=True)
 
 
+# 链接
 class Links(models.Model):
     id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=20)
@@ -36,5 +40,10 @@ class Links(models.Model):
     img = models.CharField(max_length=200)
     createTime = models.DateTimeField(auto_now_add=True)
     updateTime = models.DateTimeField(auto_now=True)
+
+
+# 文章类型
+class Types(models.Model):
+    id = models.IntegerField(primary_key=True)
 
 
