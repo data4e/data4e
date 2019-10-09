@@ -1,7 +1,7 @@
 # Create your models here.
 from django.db import models
 from mdeditor.fields import MDTextField
-from account.models import D4eUser
+from django.conf import settings
 
 
 class BaseModel(models.Model):
@@ -28,7 +28,7 @@ class Tags(BaseModel):
 # 文章
 class Articles(BaseModel):
     """文章"""
-    author = models.ForeignKey(D4eUser, on_delete=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=True)
     tags = models.ManyToManyField('Tags', verbose_name='标签', blank=True)
     body = MDTextField('正文')
 
@@ -43,7 +43,8 @@ class Articles(BaseModel):
 class Comment(BaseModel):
     article = models.ForeignKey('Articles', on_delete=True)
     parent_comment = models.ForeignKey('self', verbose_name='上级评论', blank=True, null=True, on_delete=models.CASCADE)
-    creator = models.ForeignKey(D4eUser, verbose_name='评论人', blank=False, null=False, on_delete=models.CASCADE)
+    creator = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='评论人', blank=False, null=False,
+                                on_delete=models.CASCADE)
 
     class Meta:
         db_table = 'a_comment'

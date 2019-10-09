@@ -9,11 +9,6 @@ class D4eUser(AbstractUser):
     create_time = models.DateTimeField('创建时间', auto_now_add=True)
     update_time = models.DateTimeField('修改时间', auto_now=True)
     age = models.IntegerField('年龄', null=True)
-    sex = (
-        (1, '男'),
-        (2, '女'),
-        (3, '保密')
-    )
 
     def save(self, *args, **kwargs):
         return AbstractUser.save(self)
