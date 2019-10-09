@@ -8,6 +8,7 @@ class Tags(models.Model):
     id = models.IntegerField(primary_key=True)  # id
     name = models.CharField(max_length=20)
     createTime = models.DateTimeField(auto_now_add=True)
+    updateTime = models.DateTimeField(auto_now=True)
 
 
 # 文章
@@ -21,6 +22,8 @@ class Article(models.Model):
 class Comment(models.Model):
     id = models.IntegerField(primary_key=True)
     article = models.ForeignKey(Article, on_delete=True)
+    createTime = models.DateTimeField(auto_now_add=True)
+    updateTime = models.DateTimeField(auto_now=True)
 
 
 # 导航
@@ -45,5 +48,8 @@ class Links(models.Model):
 # 文章类型
 class Types(models.Model):
     id = models.IntegerField(primary_key=True)
+    typeDesc = models.CharField(max_length=20)
+    createTime = models.DateTimeField(auto_now_add=True)
+    updateTime = models.DateTimeField(auto_now=True)
 
 
