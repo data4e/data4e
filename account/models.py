@@ -1,3 +1,10 @@
 from django.db import models
 
 # Create your models here.
+from django.contrib.auth.models import AbstractUser, BaseUserManager
+
+
+class D4eUser(AbstractUser):
+    nickname = models.CharField('昵称', max_length=120, blank=True)
+    create_time = models.DateTimeField('创建时间', auto_now_add=True)
+    update_time = models.DateTimeField('修改时间', auto_now=True)
