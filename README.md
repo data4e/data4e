@@ -27,3 +27,8 @@
 2. 新建 Feat_xxx 分支
 3. 提交代码
 4. 新建 Pull Request
+
+#### 鸣谢
+
+在本项目的开发过程中，参考并学习过的项目
+- [DjangoBlog](https://github.com/liangliangyy/DjangoBlog)

@@ -1,6 +1,7 @@
 # Create your models here.
 from django.db import models
 from django.contrib.auth.models import User
+from mdeditor.fields import MDTextField
 
 
 class BaseModel(models.Model):
@@ -20,24 +21,18 @@ class Tags(BaseModel):
 
 # 文章
 class Article(BaseModel):
+    """文章"""
     author = models.ForeignKey(User, on_delete=True)
+    Tags = models.ManyToManyField('Tags', verbose_name='标签', blank=True)
+    body = MDTextField('正文')
+
+    def save(self, force_insert=False, force_update=False, using=None,
+             update_fields=None):
+        self
 
 
 class Comment(BaseModel):
     article = models.ForeignKey('Article', on_delete=True)
-
-
-# 导航
-class Nav(BaseModel):
-    name = models.CharField(max_length=20)
-    link = models.CharField(max_length=50)
-
-
-# 链接
-class Links(BaseModel):
-    title = models.CharField(max_length=20)
-    url = models.CharField(max_length=50)
-    img = models.CharField(max_length=200)
 
 
 # 文章类型
