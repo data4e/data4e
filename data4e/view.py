@@ -5,6 +5,7 @@ Base = 'base.html'
 Tools = 'tools.html'
 Article = 'article.html'
 AddArticle = 'addOrUpdateArticle.html'
+Login = 'login.html'
 
 
 def public_parameter(request):
@@ -30,7 +31,7 @@ def index(request):
 
 def login(request):
     context = {'title': '登陆'}
-    return render(request, Base, context)
+    return render(request, Login, context)
 
 
 def tools(request):
