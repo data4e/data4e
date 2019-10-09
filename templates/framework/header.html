@@ -15,7 +15,11 @@
     <div class="userInfo">
         <a href=""><img src="{% static '/images/message.png' %}" alt="通知" class="message"></a>
         <a href="/addArticle"><img src="{% static '/images/plus.png'%}" class="plus" alt="新增"></a>
-        <a href=""><img class="avatar" src="https://i.loli.net/2017/08/21/599a521472424.jpg" alt="avatar"></a>
+        {% if login %} <!-- 已经登陆 -->
+            <a href=""><img class="avatar" src="https://i.loli.net/2017/08/21/599a521472424.jpg" alt="avatar"></a>
+        {% else %} <!-- 未登录 -->
+            <a href="">登录/注册</a>
+        {% endif %}
     </div>
 </header>
 
@@ -73,7 +77,12 @@
         margin-right: 10px;
         opacity: 0.6;
     }
-
+    .userInfo a {
+        color: #e8eaec;
+        text-decoration: none;
+        font-size: 14px;
+        opacity: 0.8;
+    }
     .avatar {
         float: right;
         width: 25px;
