@@ -30,5 +30,8 @@
 
 #### 鸣谢
 
-在本项目的开发过程中，参考并学习过的项目
+在本项目的开发过程中，参考并学习过的项目:
 - [DjangoBlog](https://github.com/liangliangyy/DjangoBlog)
+
+本项目中使用到的优秀开源项目：
+
