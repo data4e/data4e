@@ -1,7 +1,32 @@
-{% extends 'base.html' %}
-{% block content_left %}
-    <div class="login-content">
-        <a href="">使用GitHub账户登录</a>
-    </div>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data4e | 登录</title>
+</head>
 
+<body>
+    <div class="login-content">
+        <form action="/account/login" method="post">
+            用户名: <input type="text" name="firstname"><br>
+            密码: <input type="text" name="lastname">
+            <br>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+<style>
+    body {
+        padding-top: 100px;
+    }
+    .login-content {
+        width: 500px;
+        height: 200px;
+        background-color: #e8eaec;
+        border-radius: 10px;
+        margin: 0 auto;
+        box-shadow: 4px 4px 2px silver;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
