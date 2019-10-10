@@ -20,7 +20,7 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
 # ]
 
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
 from . import view
@@ -32,4 +32,5 @@ urlpatterns = [
     url(r'^tools$', view.tools),
     url(r'^addArticle$', view.add_article),
     url(r'^login$', view.login),
+    url(r'', include('account.urls', namespace='account')),
 ]

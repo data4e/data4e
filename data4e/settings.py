@@ -132,3 +132,7 @@ STATICFILES_DIRS = [
 ]
 
 AUTH_USER_MODEL = 'account.D4eUser'
+
+APPEND_SLASH = False
+
+LOGIN_URL = '/login'

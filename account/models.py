@@ -15,3 +15,4 @@ class D4eUser(AbstractUser):
 
     class Meta(AbstractUser.Meta):
         db_table = 'u_user'
+        verbose_name = '用户'

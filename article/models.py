@@ -22,6 +22,7 @@ class Tags(BaseModel):
 
     class Meta:
         db_table = 'a_tags'
+        verbose_name = '标签'
 
 
 # 文章
@@ -38,6 +39,7 @@ class Articles(BaseModel):
 
     class Meta:
         db_table = 'a_articles'
+        verbose_name = '文章'
 
 
 class Comment(BaseModel):
@@ -56,5 +58,6 @@ class Types(BaseModel):
 
     class Meta:
         db_table = 'a_types'
+        verbose_name = '文章类型'
 
 
