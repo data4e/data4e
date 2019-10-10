@@ -18,11 +18,14 @@ class BaseModel(models.Model):
 
 # 标签
 class Tags(BaseModel):
-    name = models.CharField(max_length=20)
+    name = models.CharField('标签', max_length=20)
 
     class Meta:
         db_table = 'a_tags'
         verbose_name = '标签'
+
+    def __str__(self):
+        pass
 
 
 # 文章
@@ -47,6 +50,7 @@ class Comment(BaseModel):
     parent_comment = models.ForeignKey('self', verbose_name='上级评论', blank=True, null=True, on_delete=models.CASCADE)
     creator = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name='评论人', blank=False, null=False,
                                 on_delete=models.CASCADE)
+    body = models.TextField('body')
 
     class Meta:
         db_table = 'a_comment'
