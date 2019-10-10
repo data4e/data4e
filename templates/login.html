@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <title>data4e | 登录</title>
@@ -17,15 +18,18 @@
 </body>
 <style>
     body {
-        padding-top: 100px;
+        padding-top: 200px;
+        background-image: url("{% static '/images/th.jpeg' %}");
+        background-repeat:no-repeat;
+        background-size: 110%;
     }
     .login-content {
         width: 500px;
         height: 200px;
         background-color: #e8eaec;
-        border-radius: 10px;
+        border-radius: 6px;
         margin: 0 auto;
-        box-shadow: 4px 4px 2px silver;
+        box-shadow: 6px 6px 3px #343a40;
         text-align: center;
         padding: 10px;
     }
