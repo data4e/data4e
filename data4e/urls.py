@@ -31,6 +31,5 @@ urlpatterns = [
     url(r'^myAdmin/', admin.site.urls),
     url(r'^tools$', view.tools),
     url(r'^addArticle$', view.add_article),
-    url(r'^login$', view.login),
-    url(r'', include('account.urls', namespace='account')),
+    url(r'^users/', include('users.urls', namespace='users')),
 ]

@@ -7,5 +7,5 @@ from .forms import LoginForm
 app_name = 'account'
 
 urlpatterns = [
-    url(r'^account/login$', LoginForm),
+    url(r'login/$', LoginForm),
 ]

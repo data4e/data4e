@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.contrib.auth.models import AbstractUser, BaseUserManager
+from article.models import BaseModel
 
 
 class D4eUser(AbstractUser):
@@ -18,3 +19,25 @@ class D4eUser(AbstractUser):
     class Meta(AbstractUser.Meta):
         db_table = 'u_user'
         verbose_name = '用户'
+
+
+class UserFavorite(models.Model):
+    """用户收藏"""
+    user_id = models.IntegerField()
+    favorite_id = models.IntegerField()
+    favorite_type = models.IntegerField()
+
+    class Meta:
+        db_table = 'u_user_favorite'
+        verbose_name = '用户收藏'
+
+
+class Notification(BaseModel):
+    """消息、通知"""
+    title = models.CharField(max_length=128)
+    body = models.TextField()
+    status = models.IntegerField()
+
+    class Meta:
+        db_table = 'notification'
+        verbose_name = '消息'

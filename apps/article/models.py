@@ -65,3 +65,14 @@ class Types(BaseModel):
         verbose_name = '文章类型'
 
 
+class Link(BaseModel):
+    """友情连接"""
+    link = models.CharField(max_length=64)
+    desc = models.CharField(max_length=32)
+
+    class Meta:
+        db_table = 'a_link'
+        verbose_name = '友情连接'
+
+
+

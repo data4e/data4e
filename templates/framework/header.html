@@ -1,10 +1,10 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>data4e | {{title}}</title>
 </head>
-{% load staticfiles %}
 <header class="header">
     <div class="logo">
         <a href="/">
@@ -24,7 +24,7 @@
         {% if login %} <!-- 已经登陆 -->
             <a href=""><img class="avatar" src="https://i.loli.net/2017/08/21/599a521472424.jpg" alt="avatar"></a>
         {% else %} <!-- 未登录 -->
-            <a href="/login">登录/注册</a>
+            <a href="users/login">登录/注册</a>
         {% endif %}
     </div>
 </header>
