@@ -22,6 +22,7 @@ def article(request):
 
 
 def index(request):
+    print('已经访问到index')
     nav_list = [
         {'name': '工具', 'link': 'tools'}, {'name': '工具', 'link': 'tools'}, {'name': '工具', 'link': 'tools'}
     ]
