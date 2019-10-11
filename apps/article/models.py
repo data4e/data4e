@@ -14,7 +14,7 @@ class Tags(BaseModel):
         verbose_name_plural = '标签'
 
     def __str__(self):
-        pass
+        return self.name
 
 
 # 文章
@@ -33,6 +33,9 @@ class Articles(BaseModel):
         verbose_name = '文章'
         verbose_name_plural = '文章'
 
+    def __str__(self):
+        return self.title
+
 
 class Comment(BaseModel):
     article = models.ForeignKey('Articles', on_delete=True)
@@ -44,6 +47,9 @@ class Comment(BaseModel):
         verbose_name = '评论'
         verbose_name_plural = '评论'
 
+    def __str__(self):
+        return self.body
+
 
 # 文章类型
 class Types(BaseModel):
@@ -53,6 +59,9 @@ class Types(BaseModel):
         db_table = 'a_types'
         verbose_name = '文章类型'
         verbose_name_plural = '文章类型'
+
+    def __str__(self):
+        return self.type_desc
 
 
 
