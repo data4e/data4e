@@ -8,3 +8,9 @@ def user_login(request):
         return render(request, 'login.html')
     else:
         pass
+
+
+def user_list(request):
+    print('请求用户列表')
+    return render(request, '{message : 用户列表}')
+

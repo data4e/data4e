@@ -5,4 +5,5 @@ app_name = 'users'
 
 urlpatterns = [
     path('login/', views.user_login, name='login'),
+    path('', views.user_list)
 ]

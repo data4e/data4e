@@ -2,13 +2,13 @@ from django.db import models
 
 # Create your models here.
 from django.contrib.auth.models import AbstractUser, BaseUserManager
-from article.models import BaseModel
+from common.models import BaseModel
 
 
 class D4eUser(AbstractUser):
     """用户"""
     nickname = models.CharField('昵称', max_length=120, blank=True)
-    age = models.IntegerField('年龄', null=True)
+    birth = models.DateField('生日', null=True)
     avatar = models.CharField(max_length=256)
     qq = models.CharField(max_length=16)
     web_site = models.CharField(max_length=64)

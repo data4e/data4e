@@ -13,7 +13,7 @@ class TagAdmin(admin.ModelAdmin):
 
 
 class CommentAdmin(admin.ModelAdmin):
-    list_display = ('parent_comment', 'creator', 'create_time')
+    list_display = ('parent_comment', 'create_user', 'create_time')
 
 
 class TypeAdmin(admin.ModelAdmin):
