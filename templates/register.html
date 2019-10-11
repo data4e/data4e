@@ -3,20 +3,23 @@
 {% load staticfiles %}
 <head>
     <meta charset="UTF-8">
-    <title>data4e | 登录</title>
+    <title>data4e | 注册</title>
 </head>
 
 <body>
     <div class="login-content">
-        <form action="{% url 'users:login' %}" method="post">
+        <form action="{% url 'users:register' %}" method="post">
             {% csrf_token %}
             用户名: <input type="text" name="username"><br>
             密码: <input type="password" name="password">
             <br>
-            <button type="submit">提交</button>
             <p>
-                还没有账户？ 点此 <a href="{% url 'users:register' %}">注册</a>
+                {{ msg }}
+                {% for key,err in user_register_form.errors.items %}
+                    {{ err }}
+                {% endfor %}
             </p>
+            <button type="submit">注册</button>
         </form>
     </div>
 </body>
