@@ -1,14 +1,31 @@
 from django.shortcuts import render, redirect, reverse
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm, UserLoginForm
 from .models import D4eUser
+from django.contrib.auth import login, logout, authenticate
 # Create your views here.
 
 
 def user_login(request):
+    """用户登陆"""
     if request.method == 'GET':
         return render(request, 'login.html')
     else:
-        pass
+        user_login_form = UserLoginForm(request.POST)
+        if user_login_form:
+            username = user_login_form.cleaned_data['username']
+            password = user_login_form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            if user:
+                login(request, user)
+                return redirect(reverse('index'))
+            else:
+                return render(request, 'login.html', {
+                    'msg': '用户名或者密码错误'
+                })
+        else:
+            return render(request, 'register.html', {
+                'user_login_form': user_login_form
+            })
 
 
 def user_list(request):
@@ -40,5 +57,8 @@ def user_register(request):
             return render(request, 'register.html', {
                 'user_register_form': user_register_form
             })
-
+#
+# def user_logout(reques):
+#
+#
 
