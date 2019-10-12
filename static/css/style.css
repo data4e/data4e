@@ -265,12 +265,14 @@ nav ul li:hover > ul,
 header {
 	float: left;
 	width: 100%;
-	background-color: #e44d3a;
+	/*background-color: #e44d3a;*/
+	background-color: #515a6e;
 	/*background-color: #000;*/
 }
 .footer {
 	/*background-color: #343a40;*/
-	background-color: #e44d3a;
+	/*background-color: #e44d3a;*/
+	background-color: #515a6e;
 	width: 100%;
 	height: 60px;
 	/*position: absolute;*/
@@ -407,7 +409,8 @@ header {
 	border: 0;
 }
 .search-bar form button i {
-	color: #e44d3a;
+	/*color: #e44d3a;*/
+	color: #515a6e;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -429,6 +432,7 @@ nav ul li:hover > ul {
 	visibility: visible;
 	z-index: 9999;
 }
+
 nav ul ul {
 	position: absolute;
 	top: 100%;
@@ -442,12 +446,10 @@ nav ul ul {
 	z-index: 999999;
 }
 nav ul ul li {
-	padding: 0;
 	float: left;
 	width: 100%;
 	text-align: left;
 	margin-bottom: 15px;
-	padding: 0 20px;
 }
 nav ul ul li a:hover {
 	color: #fff;
@@ -455,6 +457,7 @@ nav ul ul li a:hover {
 nav ul ul li a {
 	font-size: 16px;
 }
+
 .notification-box.msg p {
 	line-height: 16px;
 	font-size: 12px;
@@ -555,8 +558,10 @@ nav > ul > li > a:hover {
 .user-account {
 	float: right;
 	width: 110px;
-	border-left: 1px solid #dd3e2b;
-	border-right: 1px solid #dd3e2b;
+	border-left: 1px solid #17233d;
+	border-right: 1px solid #17233d;
+	/*border-left: 1px solid #dd3e2b;*/
+	/*border-right: 1px solid #dd3e2b;*/
 	box-sizing: border-box;
 	position: relative;
 }
