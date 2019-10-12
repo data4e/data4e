@@ -9,9 +9,10 @@
 #### 软件架构
 
 - Python3
-- Django
+- Django2
 - Mysql
 - Django Admin
+- Bootstrap 4
 
 #### 开发
 
