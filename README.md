@@ -13,12 +13,13 @@
 - Mysql
 - Django Admin
 
-#### 安装教程
+#### 开发
 
-
-
-#### 使用说明
-
+1. clone 本仓库
+2. 执行命令安装依赖 ```pip3 install -Ur requirements.txt```
+3. 数据库创建库 'data4e'
+4. 数据迁移
+5. 本地启动
 
 
 #### 参与贡献
