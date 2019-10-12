@@ -8,7 +8,7 @@ from django.contrib.auth import login, logout, authenticate
 def user_login(request):
     """用户登陆"""
     if request.method == 'GET':
-        return render(request, 'login.html')
+        return render(request, 'sign-in.html')
     else:
         user_login_form = UserLoginForm(request.POST)
         if user_login_form.is_valid():
@@ -19,11 +19,11 @@ def user_login(request):
                 login(request, user)
                 return redirect(reverse('index'))
             else:
-                return render(request, 'login.html', {
+                return render(request, 'sign-in.html', {
                     'msg': '用户名或者密码错误'
                 })
         else:
-            return render(request, 'login.html', {
+            return render(request, 'sign-in.html', {
                 'user_login_form': user_login_form
             })
 
@@ -36,7 +36,7 @@ def user_list(request):
 def user_register(request):
     """用户注册"""
     if request.method == 'GET':
-        return render(request, 'register.html')
+        return render(request, 'sign-in.html')
     else:
         user_register_form = UserRegisterForm(request.POST)
         if user_register_form.is_valid():
@@ -44,7 +44,7 @@ def user_register(request):
             password = user_register_form.cleaned_data['password']
             user_lists = D4eUser.objects.filter(username=username)
             if user_lists:
-                return render(request, 'register.html', {
+                return render(request, 'sign-in.html', {
                     'msg': '用户已经存在！'
                 })
             else:
@@ -56,13 +56,13 @@ def user_register(request):
                 login(request, a)
                 return redirect(reverse('index'))
         else:
-            return render(request, 'register.html', {
+            return render(request, 'sign-in.html', {
                 'user_register_form': user_register_form
             })
 
 
 def user_logout(request):
-    pass
-
+    logout(request)
+    return render(request, 'sign-in.html')
 
 
