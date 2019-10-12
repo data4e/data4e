@@ -11,7 +11,7 @@ def user_login(request):
         return render(request, 'login.html')
     else:
         user_login_form = UserLoginForm(request.POST)
-        if user_login_form:
+        if user_login_form.is_valid():
             username = user_login_form.cleaned_data['username']
             password = user_login_form.cleaned_data['password']
             user = authenticate(username=username, password=password)
@@ -23,7 +23,7 @@ def user_login(request):
                     'msg': '用户名或者密码错误'
                 })
         else:
-            return render(request, 'register.html', {
+            return render(request, 'login.html', {
                 'user_login_form': user_login_form
             })
 
@@ -52,13 +52,17 @@ def user_register(request):
                 a.username = username
                 a.set_password(password)
                 a.save()
+
+                login(request, a)
                 return redirect(reverse('index'))
         else:
             return render(request, 'register.html', {
                 'user_register_form': user_register_form
             })
-#
-# def user_logout(reques):
-#
-#
+
+
+def user_logout(request):
+    pass
+
+
 
