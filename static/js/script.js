@@ -1,7 +1,6 @@
 $(window).on("load", function() {
     "use strict";
 
-    debugger;
 
     
     //============= POST PROJECT POPUP FUNCTION =========
