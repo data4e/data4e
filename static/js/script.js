@@ -233,7 +233,7 @@ $(window).on("load", function() {
 
     $(".user-info").on("mouseout", function(){
         console.log('失去焦点');
-        $(this).next(".user-account-settingss").toggleClass("hidden");
+        $(this).next(".user-account-settingss").removeClass("hidden");
     });
 
     //  ============= FORUM LINKS MOBILE MENU FUNCTION =========
