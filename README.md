@@ -12,7 +12,7 @@
 - Django2
 - Mysql
 - Django Admin
-- Bootstrap 4
+- Bootstrap3
 
 #### 开发
 
