@@ -1,7 +1,18 @@
+/*header 部分*/
+.user-info {
+    border-style:solid;
+    border-color:#ed4014;
+    border-width: 0 1px 0 1px;
+    margin-left: 10px
+}
+.avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
 /*########footer 部分 ########*/
 footer{
-    /*background-color: #343a40;*/
-    /*background-color: #e44d3a;*/
     background-color: #101010;
     width: 100%;
     height: 60px;
@@ -31,5 +42,12 @@ footer{
 }
 /*默认的内容高度*/
 .content-default{
-    min-height: calc(100vh - 60px)
+    margin-top: 50px;
+    min-height: calc(100vh - 110px)
+}
+/*登录部分*/
+
+
+.hidden {
+    color: #ed4014;
 }
