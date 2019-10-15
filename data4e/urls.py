@@ -21,7 +21,7 @@ from django.contrib import admin
 from . import view
 
 urlpatterns = [
-    path('article/', view.article),
+    path('article/', include('article.urls', namespace='article')),
     path('', view.index, name='index'),
     path('myAdmin/', admin.site.urls),
     path('tools/', view.tools),
