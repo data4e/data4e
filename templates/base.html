@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Django 网站 | data4e.cn</title>
     <link href="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'style.css' %}">
@@ -42,7 +43,7 @@
                                 <li><a>欢迎 {{ request.user }}</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">发布</a></li>
-                                <li><a href="#">个人中心</a></li>
+                                <li><a href="{% url 'users:profile' %}">个人中心</a></li>
                                 <li><a href="#">设置</a></li>
                                 <li><a href="/">消息中心<span class="badge pull-right"> 50</span></a></li>
                                 <li class="divider"></li>

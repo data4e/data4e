@@ -28,7 +28,7 @@ SECRET_KEY = 'd-@ngd)n*8sh70l201w0l-5syb^j)tm=7wm4hq)t=y0yr#gru5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'www.data4e.cn']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
