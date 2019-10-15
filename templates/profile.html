@@ -1,9 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base-content.html' %}
 {% block title %}
     个人中心
 {% endblock %}
-{% block content %}
+{% block content-left %}
     <div class="profile">
         {{ request.user }}
     </div>
+{% endblock %}
+{% block content-right %}
+    {{ request.user }}
 {% endblock %}

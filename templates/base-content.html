@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% block content-left %}
-    {% endblock %}
-    {% block content-right %}
-
-    {% endblock %}
+    <div class="row">
+        <div class="content-left col-lg-8">
+            {% block content-left %}
+            {% endblock %}
+        </div>
+        <div class="content-right col-lg-4">
+            {% block content-right %}
+            {% endblock %}
+        </div>
+    </div>
 {% endblock %}

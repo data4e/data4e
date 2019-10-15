@@ -59,3 +59,11 @@ footer{
 .err-message{
     color: #ed4014;
 }
+
+/*二级base部分。base-content.html , 用于内页布局的页面继承*/
+.content-left{
+    background-color: aquamarine;
+}
+.content-right{
+    background-color: #ed4014;
+}
