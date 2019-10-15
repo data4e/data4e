@@ -22,12 +22,7 @@ def article(request):
 
 
 def index(request):
-    print('已经访问到index')
-    nav_list = [
-        {'name': '工具', 'link': 'tools'}, {'name': '工具', 'link': 'tools'}, {'name': '工具', 'link': 'tools'}
-    ]
-    context = {'title': 'data for everything', 'hello': 'this is index !', 'nav_list': nav_list}
-    return render(request, Base, context)
+    return render(request, Base)
 
 
 def tools(request):
@@ -35,8 +30,11 @@ def tools(request):
     return render(request, Tools, context)
 
 
-def add_article(request):
-    context = {}
-    return render(request, AddArticle, context)
+def handler_404(request):
+    return render(request, '404.html')
+
+
+def handler_500(request):
+    return render(request, '500.html')
 
 

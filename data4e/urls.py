@@ -21,10 +21,12 @@ from django.contrib import admin
 from . import view
 
 urlpatterns = [
-    path('article', view.article),
+    path('article/', view.article),
     path('', view.index, name='index'),
     path('myAdmin/', admin.site.urls),
-    path('tools', view.tools),
-    path('addArticle/', view.add_article),
+    path('tools/', view.tools),
     path('users/', include('users.urls', namespace='users')),
 ]
+
+# handler404 = view.handler_404()
+# handler500 = view.handler_500()
