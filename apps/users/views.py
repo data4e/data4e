@@ -36,7 +36,7 @@ def user_list(request):
 def user_register(request):
     """用户注册"""
     if request.method == 'GET':
-        return render(request, 'sign-in.html')
+        return render(request, 'register.html')
     else:
         user_register_form = UserRegisterForm(request.POST)
         if user_register_form.is_valid():
@@ -44,7 +44,7 @@ def user_register(request):
             password = user_register_form.cleaned_data['password']
             user_lists = D4eUser.objects.filter(username=username)
             if user_lists:
-                return render(request, 'sign-in.html', {
+                return render(request, 'register.html', {
                     'msg': '用户已经存在！'
                 })
             else:
@@ -56,7 +56,7 @@ def user_register(request):
                 login(request, a)
                 return redirect(reverse('index'))
         else:
-            return render(request, 'sign-in.html', {
+            return render(request, 'register.html', {
                 'user_register_form': user_register_form
             })
 

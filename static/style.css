@@ -50,3 +50,12 @@ footer{
     min-height: calc(100vh - 110px)
 }
 /*登录部分*/
+.login-content{
+    padding-top: 50px;
+}
+.login-panel{
+    padding: 0;
+}
+.err-message{
+    color: #ed4014;
+}
