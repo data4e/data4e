@@ -1,9 +1,12 @@
+body{
+    overflow: hidden;
+    overflow-y: auto;
+}
 /*header 部分*/
 .user-info {
     border-style:solid;
     border-color:#ed4014;
     border-width: 0 1px 0 1px;
-    margin-right: 15px;
 }
 .avatar{
     width: 20px;
@@ -18,10 +21,10 @@
 /*########footer 部分 ########*/
 footer{
     background-color: #101010;
-    width: 100%;
+    max-width: 100%;
     height: 60px;
-    bottom: 0;
-    clear: both;
+    /*!*bottom: 0;*!*/
+    /*clear: both;*/
     padding: 5px 0 5px 0;
 }
 .footer-content {
