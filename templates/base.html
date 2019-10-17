@@ -32,10 +32,16 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="/"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
-                    <li class="dropdown"><a href="{% url 'tools:' %}"><span class="glyphicon glyphicon-briefcase"></span> 工具</a></li>
+                    <li><a href="{% url 'tools:' %}"><span class="glyphicon glyphicon-briefcase"></span> 工具</a></li>
                     <li><a href="{% url 'articles:' %}"><span class="glyphicon glyphicon-th-list"></span> 文章</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> 教程</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-download" ></span> 资源下载</a></li>
+                    <li class="dropdown" >
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">教程<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">文档收集</a></li>
+                            <li><a href="">使用教程</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-download" ></span>资源下载</a></li>
                     {% if request.user.is_authenticated %}
                         <li class="dropdown">
                             <a id="user-info" class="dropdown-toggle user-info" data-toggle="dropdown" href="#">
@@ -51,7 +57,7 @@
                                 <li class="divider"></li>
 {#                                Django 后台管理入口#}
                                 {% if request.user.is_superuser %}
-                                    <li><a href="django_admin/">管理后台</a></li>
+                                    <li><a href="/django_admin/">管理后台</a></li>
                                 {% endif %}
                                 <li><a href="{% url 'users:logout' %}">退出</a></li>
                             </ul>
@@ -85,7 +91,7 @@
     </footer>
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/3.4.1/js/bootstrap.js"></script>
-    <script src="{% static 'script.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/vditor/dist/index.min.js" defer></script>
+    <script src="{% static 'script.js' %}"></script>
 </body>
 </html>
