@@ -22,7 +22,7 @@ from . import view
 
 urlpatterns = [
     path('', view.index, name='index'),
-    path('myAdmin/', admin.site.urls),
+    path('django_admin/', admin.site.urls, name='django_admin'),
     path('tools/', include('tools.urls', namespace='tools')),
     path('users/', include('users.urls', namespace='users')),
     path('article/', include('article.urls', namespace='article')),
