@@ -48,11 +48,11 @@ footer{
 }
 /*默认的内容高度*/
 .content-default{
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 60px);
     max-width: 1140px;
-    margin: 51px auto auto auto;
+    margin: auto;
     background-color: antiquewhite;
-    padding: 10px;
+    padding: 60px 10px 10px 10px;
 }
 /*登录部分*/
 .login-content{
