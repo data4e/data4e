@@ -74,3 +74,38 @@ footer{
     /*background-color: #ed4014;*/
     padding: 10px 0 10px 10px;
 }
+
+/*个人主页部分*/
+.profile-nav ul.nav-tabs{
+    width: 245px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+}
+.profile-nav ul.nav-tabs li{
+    margin: 0;
+    border-top: 1px solid #ddd;
+}
+.profile-nav ul.nav-tabs li:first-child{
+    border-top: none;
+}
+.profile-nav ul.nav-tabs li a{
+    margin: 0;
+    padding: 8px 16px;
+    border-radius: 0;
+}
+.profile-nav ul.nav-tabs li.active a, ul.nav-tabs li.active a:hover{
+    color: #fff;
+    background: #0088cc;
+    border: 1px solid #0088cc;
+}
+.profile-nav ul.nav-tabs li:first-child a{
+    border-radius: 4px 4px 0 0;
+}
+.profile-nav ul.nav-tabs li:last-child a{
+    border-radius: 0 0 4px 4px;
+}
+.profile-nav ul.nav-tabs.affix{
+    top: 30px; /* Set the top position of pinned element */
+}

@@ -1,19 +1,36 @@
-{% extends 'base-content.html' %}
+{% extends 'base.html' %}
 {% block title %}
     个人中心
 {% endblock %}
-{% block content-left %}
-    <div class="profile">
-        {{ request.user }}<br><br>
+{% block content %}
+    <body data-spy="scroll" data-target="#myScrollspy">
+        <div class="container" >
+            <div class="row">
+                <div class="col-xs-9">
+                    <h2 id="section-1">个人报表</h2>
 
-    </div>
-{% endblock %}
-{% block content-right %}
-    <ul class="list-group">
-        <li class="list-group-item">主页</li>
-        <li class="list-group-item">文章</li>
-        <li class="list-group-item">评论</li>
-        <li class="list-group-item">修改密码</li>
-        <li class="list-group-item">记事本</li>
-    </ul>
+                    <hr>
+                    <h2 id="section-2">我的文章后</h2>
+                    <hr>
+                    <h2 id="section-3">我的评论</h2>
+                    <hr>
+                    <h2 id="section-4">个人设置</h2>
+                    <hr>
+                    <h2 id="section-5">修改密码</h2>
+                    <form action="" class="reset-password">
+
+                    </form>
+                </div>
+                <div class="col-xs-3 profile-nav" id="myScrollspy">
+                    <ul class="nav nav-tabs nav-stacked" data-spy="affix" data-offset-top="125">
+                        <li class="active"><a href="#section-1">个人报表</a></li>
+                        <li><a href="#section-2">我的文章</a></li>
+                        <li><a href="#section-3">我的评论</a></li>
+                        <li><a href="#section-4">个人设置</a></li>
+                        <li><a href="#section-5">修改密码</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
 {% endblock %}
