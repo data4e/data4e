@@ -51,8 +51,8 @@ footer{
     min-height: calc(100vh - 60px);
     max-width: 1140px;
     margin: auto;
-    background-color: antiquewhite;
-    padding: 60px 10px 10px 10px;
+    /*background-color: antiquewhite;*/
+    padding-top: 60px;
 }
 /*登录部分*/
 .login-content{
@@ -67,10 +67,10 @@ footer{
 
 /*二级base部分。base-content.html , 用于内页布局的页面继承*/
 .content-left{
-    background-color: aquamarine;
-    padding: 10px;
+    /*background-color: aquamarine;*/
+    padding: 10px 10px 10px 0;
 }
 .content-right{
-    background-color: #ed4014;
-    padding: 10px;
+    /*background-color: #ed4014;*/
+    padding: 10px 0 10px 10px;
 }
