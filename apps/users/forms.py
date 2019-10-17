@@ -22,7 +22,23 @@ class UserRegisterForm(forms.Form):
         'min_length': '密码长度最少8位',
         'max_length': '密码不能超过20位'
     })
-    repeat_password = forms.CharField(required=True, min_length=9, max_length=20, error_messages={
+    verify_new_password = forms.CharField(required=True, min_length=9, max_length=20, error_messages={
+        'required': '密码不能为空',
+        'min_length': '密码长度最少8位',
+        'max_length': '密码不能超过20位'
+    })
+
+
+class ResetPasswordForm(forms.Form):
+    old_password = forms.CharField(required=True, error_messages={
+        'required': '旧密码不能为空'
+    })
+    new_password = forms.CharField(required=True, min_length=8, max_length=20, error_messages={
+        'required': '密码不能为空',
+        'min_length': '密码长度最少8位',
+        'max_length': '密码不能超过20位'
+    })
+    verify_new_password = forms.CharField(required=True, max_length=20, min_length=8, error_messages={
         'required': '密码不能为空',
         'min_length': '密码长度最少8位',
         'max_length': '密码不能超过20位'

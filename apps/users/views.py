@@ -42,7 +42,13 @@ def user_register(request):
         if user_register_form.is_valid():
             username = user_register_form.cleaned_data['username']
             password = user_register_form.cleaned_data['password']
+            verify_new_password = user_register_form.cleaned_data['verify_new_password']
+            nickname = user_register_form.cleaned_data['nickname']
             user_lists = D4eUser.objects.filter(username=username)
+            if verify_new_password != password:
+                return render(request, 'register.html', {
+                    'msg': '两次输入的密码必须相同！'
+                })
             if user_lists:
                 return render(request, 'register.html', {
                     'msg': '用户已经存在！'
@@ -51,6 +57,7 @@ def user_register(request):
                 a = D4eUser()
                 a.username = username
                 a.set_password(password)
+                a.nickname = nickname
                 a.save()
 
                 login(request, a)
@@ -68,5 +75,8 @@ def user_logout(request):
 
 def profile(request):
     return render(request, 'profile.html')
+
+def reset_password(request):
+    pass
 
 

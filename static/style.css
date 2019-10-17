@@ -77,7 +77,7 @@ footer{
 
 /*个人主页部分*/
 .profile-nav ul.nav-tabs{
-    width: 245px;
+    /*width: 245px;*/
     margin-top: 20px;
     border-radius: 4px;
     border: 1px solid #ddd;

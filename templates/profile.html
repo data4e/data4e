@@ -4,14 +4,16 @@
 {% endblock %}
 {% block content %}
     <body data-spy="scroll" data-target="#myScrollspy">
-        <div class="container" >
-            <div class="jumbotron">
-{#                <h1>Bootstrap Affix</h1>#}
+        <div class="container" style="padding: 0;margin: 0; width: 100%">
+            <div class="jumbotron" style="padding: 20px">
+                <div class="user-profile-info">
+                    <img src="https://img.hacpai.com/avatar/1505456507935_1562228743747.jpeg" class="img-rounded" style="width: 50px; height: 50px">
+                    <p>文章数：125</p>
+                </div>
             </div>
             <div class="row">
                 <div class="col-xs-9">
                     <h2 id="section-1">个人报表</h2>
-
                     <hr>
                     <h2 id="section-2">我的文章后</h2>
                     <hr>
@@ -20,8 +22,30 @@
                     <h2 id="section-4">个人设置</h2>
                     <hr>
                     <h2 id="section-5">修改密码</h2>
-                    <form action="" class="reset-password">
-
+                    <form class="form-horizontal" role="form" action="" method="post">
+                        <div class="form-group">
+                            <label for="old_password" class="col-xs-4 control-label">旧密码</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="old_password" placeholder="请输入旧密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="new_password" class="col-xs-4 control-label">新密码</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="new_password" placeholder="请输入新密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="verify_new_password" class="col-xs-4 control-label">确认新密码</label>
+                            <div class="col-xs-8">
+                                <input type="text" class="form-control" id="verify_new_password" placeholder="请再次输入新密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-offset-4 col-xs-8">
+                                <button type="submit" class="btn btn-default">确认修改</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="col-xs-3 profile-nav" id="myScrollspy">

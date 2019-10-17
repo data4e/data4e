@@ -16,27 +16,27 @@
                         <form action="{% url 'users:register' %}" method="post" class="form-horizontal">
                             {% csrf_token %}
                             <div class="form-group">
-                                <label for="lastname" class="control-label col-xs-3">昵称</label>
+                                <label for="nickname" class="control-label col-xs-3">昵称</label>
                                 <dic class="col-xs-9">
                                     <input type="text" class="form-control" id="nickname" name="nickname" placeholder="请输入昵称">
                                 </dic>
                             </div>
                             <div class="form-group">
-                                <label for="lastname" class="control-label col-xs-3">用户名</label>
+                                <label for="username" class="control-label col-xs-3">用户名</label>
                                 <dic class="col-xs-9">
                                     <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
                                 </dic>
                             </div>
                             <div class="form-group">
-                            <label for="lastname" class="control-label col-xs-3">密码</label>
+                            <label for="password" class="control-label col-xs-3">密码</label>
                             <dic class="col-xs-9">
                                 <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
                             </dic>
                         </div>
                             <div class="form-group">
-                                <label for="lastname" class="control-label col-xs-3">验证密码</label>
+                                <label for="verify_new_password" class="control-label col-xs-3">验证密码</label>
                                 <dic class="col-xs-9">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="再次输入密码">
+                                    <input type="password" class="form-control" id="verify_new_password" name="verify_new_password" placeholder="再次输入密码">
                                 </dic>
                             </div>
                             <div class="err-message">

@@ -21,11 +21,11 @@ from django.contrib import admin
 from . import view
 
 urlpatterns = [
-    # path('article/', include('article.urls', namespace='article')),
     path('', view.index, name='index'),
     path('myAdmin/', admin.site.urls),
-    path('tools/', view.tools),
+    path('tools/', include('tools.urls', namespace='tools')),
     path('users/', include('users.urls', namespace='users')),
+    path('article/', include('article.urls', namespace='article')),
 ]
 
 # handler404 = view.handler_404()
