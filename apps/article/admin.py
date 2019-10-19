@@ -5,6 +5,7 @@ from .models import Articles, Tags, Comment, Types
 
 
 class ArticleAdmin(admin.ModelAdmin):
+    print('')
     pass
 
 
