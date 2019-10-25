@@ -28,5 +28,6 @@ urlpatterns = [
     path('article/', include('article.urls', namespace='article')),
 ]
 
+
 # handler404 = view.handler_404()
 # handler500 = view.handler_500()
