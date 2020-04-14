@@ -1,4 +1,4 @@
-mysqlclient == 1.4.4
-Django == 2.2.8
-markdown2 == 2.3.8
-django-mdeditor==0.1.16
+mysqlclient
+Django
+markdown2
+django-mdeditor
