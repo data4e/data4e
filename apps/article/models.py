@@ -38,7 +38,7 @@ class Articles(BaseModel):
 
 
 class Comment(BaseModel):
-    article = models.ForeignKey('Articles', on_delete=True)
+    article = models.ForeignKey('Articles', on_delete=models.CASCADE)
     parent_comment = models.ForeignKey('self', verbose_name='上级评论', blank=True, null=True, on_delete=models.CASCADE)
     body = models.TextField('body')
 
@@ -53,7 +53,7 @@ class Comment(BaseModel):
 
 # 文章类型
 class Types(BaseModel):
-    type_desc = models.CharField(max_length=20)
+    type_desc = models.CharField('类型', max_length=20)
 
     class Meta:
         db_table = 'a_types'

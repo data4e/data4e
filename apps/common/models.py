@@ -7,7 +7,7 @@ class BaseModel(models.Model):
     create_time = models.DateTimeField('创建时间', auto_now_add=True)
     update_time = models.DateTimeField('最后更新时间', auto_now=True)
     delete_flag = models.IntegerField(default=0, editable=False)
-    create_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=True, verbose_name='创建人')
+    create_user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='创建人')
 
     class Meta:  # 抽象
         abstract = True
@@ -30,7 +30,7 @@ class Link(BaseModel):
 class Dict(BaseModel):
     dict_code = models.CharField(max_length=20, verbose_name='字典码')
     dict_desc = models.CharField(max_length=32, verbose_name='字典项')
-    dict_type = models.ForeignKey('DictType', on_delete=True, verbose_name='字典类型')
+    dict_type = models.ForeignKey('DictType', on_delete=models.CASCADE, verbose_name='字典类型')
 
     class Meta:
         db_table = 'sys_dict'
